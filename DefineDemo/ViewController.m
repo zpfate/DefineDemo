@@ -9,13 +9,15 @@
 #import "ViewController.h"
 #import "DefineDemo-Swift.h"
 
-
 NSString *const kFoundationExportString = @"Hello World";
 NSString *const kExternString = @"Hello World";
 
 ViewControllerKey const ViewControllerKeyTitle = @"title";
 ViewControllerKey const ViewControllerKeySubtitle = @"subtitle";
 ViewControllerKey const ViewControllerKeySummary = @"summary"; 
+
+NSString *const kConstantString = @"string"; // 指针常量
+const NSString *kString = @"string2";  // 常量指针
 
 @interface ViewController ()
 
@@ -26,6 +28,9 @@ ViewControllerKey const ViewControllerKeySummary = @"summary";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    kConstantString = @"1";
+    kString = @"1";
     
     EnumManager *manager = [[EnumManager alloc] init];
     [manager show];
